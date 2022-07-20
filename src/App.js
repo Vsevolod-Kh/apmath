@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavPanel from "./Components/NavPanel";
+import SwipeImages from "./Components/SwipeImages";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return(
+            <header>
+                <img src={require('./Components/Images/logo.png')} alt={"logo"} id={"logo"} />
+                <h1>Санкт-Петербургский государственный университет<br />
+                    Факультет Прикладной Математики -<br />Процессов Управления</h1>
+                <NavPanel />
+            </header>
+        )
+    }
 }
 
-export default App;
+export default App
